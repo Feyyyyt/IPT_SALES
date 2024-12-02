@@ -1,0 +1,111 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff99cc, #cc0066);
+            padding-bottom: 60px; /* Prevent content overlap with footer */
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            background-color: transparent;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #444;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        header a:hover {
+            background-color: #666;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .profile-pic {
+            width: 30%;
+        }
+        .profile-pic img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .text-content {
+            width: 65%;
+            position: relative;
+        }
+        .text-content h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .text-content p {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .learn-more-content {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        /* This checkbox is visually hidden but controls the show/hide of the content */
+        #learn-more-toggle {
+            display: none;
+        }
+        /* Label styled as the "Learn More" button */
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+        .learn-more-btn:hover {
+            background-color: #0056b3;
+        }
+        /* Show hidden content when the checkbox is checked */
+        #learn-more-toggle:checked ~ .learn-more-content {
+            display: block;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        footer img {
+            width: 50px;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        footer img:hover {
+            transform: scale(1.2);
+        }
